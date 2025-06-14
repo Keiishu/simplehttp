@@ -54,9 +54,7 @@ RUN apk --no-cache add \
 
 COPY client/Main.go /root/go/src/client/Main.go
 
-RUN apk --no-cache add --virtual build-dependencies \
-        go git musl-dev && \
-        \
+RUN apk --no-cache add --virtual build-dependencies go git musl-dev && \
         go get client && \
         cp /root/go/bin/client /usr/bin/ && \
         rm -rf /root/go && \
