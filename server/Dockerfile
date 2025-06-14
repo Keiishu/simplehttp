@@ -15,7 +15,8 @@ RUN apk --no-cache add \
         nmap-ncat \
         nmap-nping \
         ip6tables \
-        iproute2
+        iproute2 \
+        openssl
 
 RUN apk --no-cache add \
         ncurses \
@@ -61,7 +62,7 @@ RUN apk --no-cache add --virtual build-dependencies \
         rm -rf /root/go && \
         apk del build-dependencies
 
-ENV PORT 8080
+ENV PORT=8080
 
 VOLUME ["/root"]
 

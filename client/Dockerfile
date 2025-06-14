@@ -15,7 +15,8 @@ RUN apk --no-cache add \
         nmap-ncat \
         nmap-nping \
         ip6tables \
-        iproute2
+        iproute2 \
+        openssl
 
 RUN apk --no-cache add \
         ncurses \

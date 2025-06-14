@@ -20,12 +20,13 @@ package main
 import (
 	e "encoding/json"
 	"flag"
-	"github.com/google/uuid"
 	"io"
 	"log"
 	"net/http"
 	"os"
 	"strconv"
+
+	"gopkg.in/google/uuid.v1"
 )
 
 func new_id() string {
